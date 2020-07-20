@@ -74,7 +74,6 @@ main {
   left: 10%;
   border-radius: 30px;
   font-size: 22px;
-  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,7 +86,6 @@ main {
   top: 0;
   left: 0;
   font-size: medium;
-  color: white;
   font-weight: 100;
   display: flex;
   justify-content: center;
@@ -159,10 +157,23 @@ main {
   position: absolute;
   width: 300px;
   text-align: center;
-  color: white;
   bottom: 20px;
   left: calc(50% - 150px);
   font-size: small;
+}
+
+.dark-blue > .panel-caption,
+.dark-blue > .counter,
+.dark-blue > .lezanta
+ {
+  color: white;
+}
+
+.orabge > .panel-caption,
+.orabge > .counter,
+.orabge > .lezanta
+ {
+  color: black;
 }
 
 .mail {
