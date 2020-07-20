@@ -162,18 +162,35 @@ main {
   font-size: small;
 }
 
-.dark-blue > .panel-caption,
+.dark-blue > .panel-caption > a,
+.orange > .panel-caption > a
+ {
+  text-decoration: none;
+}
+
+.dark-blue > .panel-caption > a,
 .dark-blue > .counter,
 .dark-blue > .lezanta
  {
   color: white;
 }
 
-.orabge > .panel-caption,
-.orabge > .counter,
-.orabge > .lezanta
+.dark-blue > .panel-caption > a:hover
+ {
+  color: #ddd;
+}
+
+.orange > .panel-caption > a,
+.orange > .counter,
+.orange > .lezanta
  {
   color: black;
+}
+
+
+.orange > .panel-caption > a:hover
+ {
+  color: #555;
 }
 
 .mail {
@@ -211,7 +228,31 @@ main {
   left: calc(50% - 100px);
 }
 
-.social > a {
+footer {
+  background-color: black;
+  color: white;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* padding: 20px 0; */
+}
+
+.social-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  /* margin-top: 10px; */
+  /* margin: auto; */
+  /* background-color: #777; */
+}
+
+.social > a,
+.social-footer > a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -220,13 +261,15 @@ main {
   border-radius: 50%;
 }
 
-.social > a:hover {
-  background-color: #ccc;
+.social > a:hover,
+.social-footer > a:hover {
+  /* background-color: #ccc; */
+  border: 1px solid #777;
 }
 
-.social > a > img {
+.social > a > img,
+.social-footer > a img {
   width: 20px;
-
 }
 
 @media only screen and (max-width: 768px) {
