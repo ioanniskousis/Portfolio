@@ -62,21 +62,29 @@ main {
 }
 
 .item-panel {
-  position: relative;
-  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 .panel-caption {
-  position: absolute;
-  width: 96%;
+  position: relative;
   height: 60px;
-  top: 20px;
-  left: 2%;
-  border-radius: 30px;
+  margin: 10px 20px;  
+  border-radius: 20px;
   font-size: 22px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
+}
+
+.panel-caption img {
+  width: 32px;
+  height: 32px;
+}
+
+.panel-caption > div {
+  display: flex;
 }
 
 .counter {
@@ -136,13 +144,11 @@ main {
 
 .item-layer,
 .item-layer-lg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 30px;
 }
 
 .item-layer > img {
@@ -154,21 +160,21 @@ main {
 }
 
 .lezanta {
-  position: absolute;
-  width: 300px;
   text-align: right;
-  bottom: 20px;
-  right: 2%;
   font-size: small;
+  margin: 10px 20px;
 }
 
-.dark-blue > .panel-caption > a,
-.orange > .panel-caption > a
+.dark-blue > .panel-caption a,
+.orange > .panel-caption a
  {
   text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.dark-blue > .panel-caption > a,
+.dark-blue > .panel-caption a,
 .dark-blue > .counter,
 .dark-blue > .lezanta
  {
@@ -180,7 +186,7 @@ main {
   color: #ddd;
 }
 
-.orange > .panel-caption > a,
+.orange > .panel-caption a,
 .orange > .counter,
 .orange > .lezanta
  {
@@ -188,9 +194,14 @@ main {
 }
 
 
-.orange > .panel-caption > a:hover
+.orange > .panel-caption a:hover
  {
   color: #555;
+}
+
+a > span {
+  font-size: small;
+  margin-right: 10px;
 }
 
 .mail {
@@ -210,7 +221,6 @@ main {
   align-items: center;
   width: 100%;
   height: 100%;
-  /* background-color: white; */
 }
 
 .mail > a:hover {
@@ -237,7 +247,6 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* padding: 20px 0; */
 }
 
 .social-footer {
@@ -246,9 +255,6 @@ footer {
   align-items: center;
   width: 100%;
   height: 40px;
-  /* margin-top: 10px; */
-  /* margin: auto; */
-  /* background-color: #777; */
 }
 
 .social > a,
@@ -263,7 +269,6 @@ footer {
 
 .social > a:hover,
 .social-footer > a:hover {
-  /* background-color: #ccc; */
   border: 1px solid #777;
 }
 
@@ -291,11 +296,6 @@ footer {
   .right-scroll {
     width: 100%;
     height: calc(100vh - 200px);
-  }
-
-  .item-panel {
-    height: 500px;
-
   }
 
   .panel-caption {
