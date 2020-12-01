@@ -33,7 +33,6 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
 .left-panel > p {
@@ -63,14 +62,14 @@ main {
 
 .item-panel {
   margin: 0;
-  padding: 0;
+  padding: 0 0 30px 0;
   overflow: hidden;
 }
 
 .panel-caption {
   position: relative;
   height: 60px;
-  margin: 10px 20px;  
+  margin: 30px 20px;
   border-radius: 20px;
   font-size: 22px;
   display: flex;
@@ -79,12 +78,27 @@ main {
 }
 
 .panel-caption img {
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
 }
 
 .panel-caption > div {
   display: flex;
+}
+
+.caption-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin-left: 10px;
+}
+
+.caption-link span {
+  font-size: small;
+  margin-top: 4px;
+  color: #fff;
 }
 
 .counter {
@@ -160,14 +174,18 @@ main {
 }
 
 .lezanta {
-  text-align: right;
+  text-align: center;
   font-size: small;
   margin: 10px 20px;
 }
 
+.more {
+  margin: 10px 40px 30px 40px;
+  font-size: 24px;
+}
+
 .dark-blue > .panel-caption a,
-.orange > .panel-caption a
- {
+.orange > .panel-caption a {
   text-decoration: none;
   display: flex;
   justify-content: center;
@@ -176,26 +194,21 @@ main {
 
 .dark-blue > .panel-caption a,
 .dark-blue > .counter,
-.dark-blue > .lezanta
- {
+.dark-blue > .lezanta {
   color: white;
 }
 
-.dark-blue > .panel-caption > a:hover
- {
+.dark-blue > .panel-caption > a:hover {
   color: #ddd;
 }
 
 .orange > .panel-caption a,
 .orange > .counter,
-.orange > .lezanta
- {
+.orange > .lezanta {
   color: black;
 }
 
-
-.orange > .panel-caption a:hover
- {
+.orange > .panel-caption a:hover {
   color: #555;
 }
 
@@ -309,7 +322,6 @@ footer {
     position: absolute;
     top: 0;
     left: calc(100% - 60px);
-
   }
 
   .social > a {
